@@ -1,16 +1,15 @@
-
-
+-- Çalışanların ad, soyad ve maaşlarını getirir.
 SELECT FirstName, LastName, Salary
 	FROM public.Employees;
 
-
+-- Çalışanların bulunduğu departmanları tekrar etmeden listeler.
 SELECT DISTINCT Department FROM public.Employees; 
 
+-- "IT" departmanında çalışan tüm çalışanları getirir.
+SELECT * FROM public.Employees WHERE Department = 'IT';
 
-SELECT * FROM public.Employees WHERE Department = IT;
-
-
+-- Çalışanları maaşlarına göre en yüksekten en düşüğe sıralayarak getirir.
 SELECT * FROM public.Employees ORDER BY Salary DESC;
 
-
-SELECT CONCAT(FirstName, ' ', LastName) as  FullName FROM public.Employees;
+-- Çalışanların ad ve soyadını birleştirerek "FullName" adıyla döndürür.
+SELECT CONCAT(FirstName, ' ', LastName) as FullName FROM public.Employees;
