@@ -1,0 +1,16 @@
+
+
+SELECT FirstName, LastName, Salary
+	FROM public.Employees;
+
+
+SELECT DISTINCT Department FROM public.Employees; 
+
+
+SELECT * FROM public.Employees WHERE Department = IT;
+
+
+SELECT * FROM public.Employees ORDER BY Salary DESC;
+
+
+SELECT CONCAT(FirstName, ' ', LastName) as  FullName FROM public.Employees;
